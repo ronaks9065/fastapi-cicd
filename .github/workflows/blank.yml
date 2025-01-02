@@ -15,9 +15,9 @@ jobs:
         run: |
           git clone https://github.com/fastapi/full-stack-fastapi-template.git
 
-      # - name: Log in to Amazon ECR
-      #   id: login-ecr
-      #   uses: aws-actions/amazon-ecr-login@v2
+      - name: Log in to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
