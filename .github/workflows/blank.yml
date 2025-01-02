@@ -55,7 +55,7 @@ jobs:
         with:
           version: 'latest'
 
-      # - name: Update kubeconfig
+      # - name: Update kubeconfig 
       #   run: |
       #     aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
 
