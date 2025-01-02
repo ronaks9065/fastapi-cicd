@@ -16,7 +16,7 @@ spec:
       - name: fastapi-ronak
       containers:
         - name: backend
-          image: 637423497309.dkr.ecr.eu-central-1.amazonaws.com/fastapi:latest
+          image: 559050212190.dkr.ecr.eu-central-1.amazonaws.com/fastapi:latest
           ports:
             - containerPort: 8000
           env:
