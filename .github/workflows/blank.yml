@@ -18,7 +18,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::559050212190:role/fastapi
+          role-to-assume: arn:aws:iam::559050212190:role/fastronak
           role-session-name: github-actions-federation
           aws-region: ${{ secrets.AWS_REGION }}
 
