@@ -73,6 +73,18 @@ jobs:
         with:
           version: 'latest'
 
+      - name: Debug AWS Identity
+        run: aws sts get-caller-identity
+
+      - name: List EKS Clusters
+        run: aws eks list-clusters --region ${{ secrets.AWS_REGION }}
+
+      - name: Debug kubeconfig
+        run: |
+          aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
+          kubectl config view
+          kubectl get nodes
+
       - name: Update kubeconfig 
         run: |
           aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }} --region ${{ secrets.AWS_REGION }}
